@@ -1,0 +1,53 @@
+{
+  "note": "Published worked examples used to validate the SWU and material balance code. Every example is public open literature and each entry cites its source. Assays are fractions, not percent. The rtol on each expectation reflects how the source rounded its published numbers.",
+  "examples": [
+    {
+      "id": "iaea-bulletin-3pct-leu",
+      "source": "IAEA Bulletin, vol. 19, no. 1, 'Developments in the Uranium Enrichment Industry', https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull19-1/19104884052.pdf",
+      "statement": "If one kilogram of 3 percent enriched uranium is needed and the tails assay is to be 0.2 percent, the input is 5.479 kg of natural uranium and 4.306 SWU.",
+      "inputs": {"feed_assay": 0.00711, "product_assay": 0.03, "tails_assay": 0.002, "product_kg": 1.0},
+      "expected": {"feed_kg": 5.479, "swu": 4.306},
+      "rtol": 0.001
+    },
+    {
+      "id": "wikipedia-swu-4p5pct-leu",
+      "source": "Wikipedia, 'Separative work units', Examples section, https://en.wikipedia.org/wiki/Separative_work_units (accessed 2026-08-19)",
+      "statement": "Beginning with 102 kg of natural uranium at 0.71 percent and enriching to 4.5 percent with tails at 0.3 percent yields 10 kg of product and 92 kg of tails, taking about 62 SWU.",
+      "inputs": {"feed_assay": 0.0071, "product_assay": 0.045, "tails_assay": 0.003, "product_kg": 10.0},
+      "expected": {"feed_kg": 102.0, "tails_kg": 92.0, "swu": 62.1},
+      "rtol": 0.01
+    },
+    {
+      "id": "wikipedia-enriched-uranium-3p6pct-tails-0p3",
+      "source": "Wikipedia, 'Enriched uranium', Separative work units section, https://en.wikipedia.org/wiki/Enriched_uranium (accessed 2026-08-19)",
+      "statement": "To produce one kilogram of 3.6 percent LEU requires approximately 8 kg of natural uranium and 4.5 SWU if the depleted stream is allowed 0.3 percent U-235.",
+      "inputs": {"feed_assay": 0.0071, "product_assay": 0.036, "tails_assay": 0.003, "product_kg": 1.0},
+      "expected": {"feed_kg": 8.0, "swu": 4.5},
+      "rtol": 0.02
+    },
+    {
+      "id": "wikipedia-enriched-uranium-3p6pct-tails-0p2",
+      "source": "Wikipedia, 'Enriched uranium', Separative work units section, https://en.wikipedia.org/wiki/Enriched_uranium (accessed 2026-08-19)",
+      "statement": "If the depleted stream has only 0.2 percent U-235, producing the same kilogram of 3.6 percent LEU requires just 6.7 kg of natural uranium but nearly 5.7 SWU.",
+      "inputs": {"feed_assay": 0.0071, "product_assay": 0.036, "tails_assay": 0.002, "product_kg": 1.0},
+      "expected": {"feed_kg": 6.7, "swu": 5.7},
+      "rtol": 0.02
+    },
+    {
+      "id": "wna-5pct-tails-0p25",
+      "source": "World Nuclear Association, 'Uranium Enrichment' information paper, https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/uranium-enrichment",
+      "statement": "To produce one kilogram of uranium enriched to 5 percent U-235 requires 7.9 SWU at a tails assay of 0.25 percent, using 10.4 kg of natural uranium feed.",
+      "inputs": {"feed_assay": 0.00711, "product_assay": 0.05, "tails_assay": 0.0025, "product_kg": 1.0},
+      "expected": {"feed_kg": 10.4, "swu": 7.9},
+      "rtol": 0.015
+    },
+    {
+      "id": "wna-5pct-tails-0p20",
+      "source": "World Nuclear Association, 'Uranium Enrichment' information paper, https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/uranium-enrichment",
+      "statement": "The same kilogram of 5 percent product requires 8.9 SWU at a 0.20 percent tails assay, using 9.4 kg of natural uranium feed.",
+      "inputs": {"feed_assay": 0.00711, "product_assay": 0.05, "tails_assay": 0.002, "product_kg": 1.0},
+      "expected": {"feed_kg": 9.4, "swu": 8.9},
+      "rtol": 0.015
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+.venv/
+build/
+__pycache__/
+*.pyc
+*.o
+*.dSYM/
+.pytest_cache/
+.DS_Store
