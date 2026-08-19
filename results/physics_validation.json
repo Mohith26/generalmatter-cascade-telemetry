@@ -1,0 +1,221 @@
+{
+  "generated_utc": "2026-08-19T23:39:54.306085+00:00",
+  "python": "3.9.6",
+  "platform": "macOS-26.4.1-arm64-arm-64bit",
+  "worked_examples": [
+    {
+      "id": "iaea-bulletin-3pct-leu",
+      "source": "IAEA Bulletin, vol. 19, no. 1, 'Developments in the Uranium Enrichment Industry', https://www.iaea.org/sites/default/files/publications/magazines/bulletin/bull19-1/19104884052.pdf",
+      "checks": {
+        "feed_kg": {
+          "published": 5.479,
+          "computed": 5.479452,
+          "rel_error": 8.251e-05,
+          "rtol": 0.001,
+          "pass": true
+        },
+        "swu": {
+          "published": 4.306,
+          "computed": 4.306475,
+          "rel_error": 0.00011021,
+          "rtol": 0.001,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "wikipedia-swu-4p5pct-leu",
+      "source": "Wikipedia, 'Separative work units', Examples section, https://en.wikipedia.org/wiki/Separative_work_units (accessed 2026-08-19)",
+      "checks": {
+        "feed_kg": {
+          "published": 102.0,
+          "computed": 102.439024,
+          "rel_error": 0.00430416,
+          "rtol": 0.01,
+          "pass": true
+        },
+        "tails_kg": {
+          "published": 92.0,
+          "computed": 92.439024,
+          "rel_error": 0.004772,
+          "rtol": 0.01,
+          "pass": true
+        },
+        "swu": {
+          "published": 62.1,
+          "computed": 62.377507,
+          "rel_error": 0.00446871,
+          "rtol": 0.01,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "wikipedia-enriched-uranium-3p6pct-tails-0p3",
+      "source": "Wikipedia, 'Enriched uranium', Separative work units section, https://en.wikipedia.org/wiki/Enriched_uranium (accessed 2026-08-19)",
+      "checks": {
+        "feed_kg": {
+          "published": 8.0,
+          "computed": 8.04878,
+          "rel_error": 0.00609756,
+          "rtol": 0.02,
+          "pass": true
+        },
+        "swu": {
+          "published": 4.5,
+          "computed": 4.53089,
+          "rel_error": 0.00686435,
+          "rtol": 0.02,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "wikipedia-enriched-uranium-3p6pct-tails-0p2",
+      "source": "Wikipedia, 'Enriched uranium', Separative work units section, https://en.wikipedia.org/wiki/Enriched_uranium (accessed 2026-08-19)",
+      "checks": {
+        "feed_kg": {
+          "published": 6.7,
+          "computed": 6.666667,
+          "rel_error": 0.00497512,
+          "rtol": 0.02,
+          "pass": true
+        },
+        "swu": {
+          "published": 5.7,
+          "computed": 5.645619,
+          "rel_error": 0.00954056,
+          "rtol": 0.02,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "wna-5pct-tails-0p25",
+      "source": "World Nuclear Association, 'Uranium Enrichment' information paper, https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/uranium-enrichment",
+      "checks": {
+        "feed_kg": {
+          "published": 10.4,
+          "computed": 10.303688,
+          "rel_error": 0.0092608,
+          "rtol": 0.015,
+          "pass": true
+        },
+        "swu": {
+          "published": 7.9,
+          "computed": 7.923371,
+          "rel_error": 0.00295832,
+          "rtol": 0.015,
+          "pass": true
+        }
+      },
+      "pass": true
+    },
+    {
+      "id": "wna-5pct-tails-0p20",
+      "source": "World Nuclear Association, 'Uranium Enrichment' information paper, https://world-nuclear.org/information-library/nuclear-fuel-cycle/conversion-enrichment-and-fabrication/uranium-enrichment",
+      "checks": {
+        "feed_kg": {
+          "published": 9.4,
+          "computed": 9.393346,
+          "rel_error": 0.00070783,
+          "rtol": 0.015,
+          "pass": true
+        },
+        "swu": {
+          "published": 8.9,
+          "computed": 8.850864,
+          "rel_error": 0.00552094,
+          "rtol": 0.015,
+          "pass": true
+        }
+      },
+      "pass": true
+    }
+  ],
+  "worked_examples_pass": true,
+  "sample_cascade": {
+    "inputs": {
+      "feed_assay": 0.00711,
+      "product_assay": 0.045,
+      "tails_assay": 0.003,
+      "alpha_generic": 1.4,
+      "product_flow": 1.0
+    },
+    "n_enrich_exact": 11.199,
+    "n_strip_exact": 4.1536,
+    "n_enrich": 12,
+    "n_strip": 5,
+    "n_total": 17,
+    "feed_stage": 6,
+    "product_assay_achieved": 0.0511599,
+    "tails_assay_achieved": 0.00260287,
+    "external_feed_flow": 10.77338174,
+    "external_tails_flow": 9.77338174,
+    "total_upflow": 260.061284,
+    "upflow_to_feed_ratio": 24.1392,
+    "invariants_max_rel_error": {
+      "stage_total": 1.1618273199485164e-16,
+      "stage_isotope": 1.9075602551851782e-16,
+      "node_total": 2.0503483760835378e-16,
+      "node_isotope": 2.6317312720178906e-16,
+      "overall_total": 0.0,
+      "overall_isotope": 0.0
+    },
+    "monotone_assay_profile": true,
+    "heads_feed_tails_ordered": true,
+    "invariant_tolerance": 1e-09,
+    "invariants_pass": true
+  },
+  "tails_tradeoff_demo": [
+    {
+      "tails_assay": 0.001,
+      "feed_per_kg_product": 7.2013,
+      "swu_per_kg_product": 10.463
+    },
+    {
+      "tails_assay": 0.0015,
+      "feed_per_kg_product": 7.754,
+      "swu_per_kg_product": 8.8014
+    },
+    {
+      "tails_assay": 0.002,
+      "feed_per_kg_product": 8.4149,
+      "swu_per_kg_product": 7.6905
+    },
+    {
+      "tails_assay": 0.0025,
+      "feed_per_kg_product": 9.2191,
+      "swu_per_kg_product": 6.8711
+    },
+    {
+      "tails_assay": 0.003,
+      "feed_per_kg_product": 10.219,
+      "swu_per_kg_product": 6.2306
+    },
+    {
+      "tails_assay": 0.0035,
+      "feed_per_kg_product": 11.4958,
+      "swu_per_kg_product": 5.7101
+    },
+    {
+      "tails_assay": 0.004,
+      "feed_per_kg_product": 13.1833,
+      "swu_per_kg_product": 5.2751
+    },
+    {
+      "tails_assay": 0.0045,
+      "feed_per_kg_product": 15.5172,
+      "swu_per_kg_product": 4.904
+    },
+    {
+      "tails_assay": 0.005,
+      "feed_per_kg_product": 18.9573,
+      "swu_per_kg_product": 4.5822
+    }
+  ]
+}

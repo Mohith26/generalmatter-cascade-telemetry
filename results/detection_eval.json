@@ -1,0 +1,23 @@
+{
+  "machine": {
+    "platform": "macOS arm64 (Apple silicon)",
+    "logical_cores": 18,
+    "compiler": "clang++ -std=c++17 -O2 -pthread",
+    "note": "all performance numbers are machine specific"
+  },
+  "config": {"channels": 64, "ticks": 20000, "seed": 20260819, "episodes_per_type": 12, "tick_ms_nominal": 10.0},
+  "frames": {"emitted": 1279359, "accepted": 1279359, "dropped": 0, "processed": 1279359, "zero_loss": true},
+  "per_fault_type": [
+    {"type": "overspeed_ramp", "episodes": 12, "tp": 12, "fp": 0, "fn": 0, "precision": 1.0000, "recall": 1.0000},
+    {"type": "vibration_spike", "episodes": 12, "tp": 10, "fp": 0, "fn": 2, "precision": 1.0000, "recall": 0.8333},
+    {"type": "thermal_drift", "episodes": 12, "tp": 12, "fp": 0, "fn": 0, "precision": 1.0000, "recall": 1.0000},
+    {"type": "sensor_dropout", "episodes": 12, "tp": 12, "fp": 0, "fn": 0, "precision": 1.0000, "recall": 1.0000}
+  ],
+  "episodes_total": 48,
+  "episodes_detected": 46,
+  "detection_latency": {"unit_note": "sim ticks, 1 tick = 10 ms nominal", "p50_ticks": 9.0, "p99_ticks": 14.0, "p50_ms": 90.0, "p99_ms": 140.0},
+  "trips": 58,
+  "detection_to_trip_latency": {"samples": 58, "p50_ticks": 10.0, "p99_ticks": 11.3, "p50_ms": 100.0, "p99_ms": 112.9},
+  "event_log_entries": 328,
+  "event_log_hash": "0e912f9a0edb1909"
+}

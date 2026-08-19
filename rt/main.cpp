@@ -65,7 +65,7 @@ static int cmd_bench(const std::string& outdir) {
     uint32_t channels, ticks;
     PipelineResult r;
   };
-  std::vector<Row> thr = {{1000, 8000, {}}, {5000, 2400, {}}, {10000, 1200, {}}};
+  std::vector<Row> thr = {{1000, 48000, {}}, {5000, 12000, {}}, {10000, 6000, {}}};
   for (auto& row : thr) {
     fprintf(stderr, "bench throughput: %u channels...\n", row.channels);
     row.r = run_pipeline(bench_config(row.channels, row.ticks, producers, 0.0));

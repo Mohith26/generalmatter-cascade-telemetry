@@ -1,0 +1,23 @@
+{
+  "machine": {
+    "platform": "macOS arm64 (Apple silicon)",
+    "logical_cores": 18,
+    "compiler": "clang++ -std=c++17 -O2 -pthread",
+    "note": "all performance numbers are machine specific"
+  },
+  "producers": 6,
+  "consumers": 1,
+  "queue_capacity": 65536,
+  "latency_sampling": "every 8th frame, stamped at emit, measured at consumer dequeue",
+  "throughput_unpaced": [
+    {"channels": 1000, "ticks": 48000, "frames_emitted": 48000000, "frames_accepted": 48000000, "frames_dropped": 0, "frames_processed": 48000000, "wall_s": 0.8133, "frames_per_sec": 59019435, "zero_loss": true, "saturated_latency_p50_us": 28.0, "saturated_latency_p99_us": 164.0},
+    {"channels": 5000, "ticks": 12000, "frames_emitted": 60000000, "frames_accepted": 60000000, "frames_dropped": 0, "frames_processed": 60000000, "wall_s": 0.6561, "frames_per_sec": 91450368, "zero_loss": true, "saturated_latency_p50_us": 705.5, "saturated_latency_p99_us": 1010.8},
+    {"channels": 10000, "ticks": 6000, "frames_emitted": 60000000, "frames_accepted": 60000000, "frames_dropped": 0, "frames_processed": 60000000, "wall_s": 0.5948, "frames_per_sec": 100880017, "zero_loss": true, "saturated_latency_p50_us": 671.7, "saturated_latency_p99_us": 1044.2}
+  ],
+  "rated_operating_point": {"tick_hz": 100.0, "note": "100 Hz per channel frame rate, blocking backpressure, zero loss required"},
+  "latency_at_rated_point": [
+    {"channels": 1000, "target_frames_per_sec": 100000, "sustained_frames_per_sec": 99957, "duration_s": 8.00, "latency_samples": 100000, "p50_us": 18.4, "p99_us": 82.0, "zero_loss": true},
+    {"channels": 5000, "target_frames_per_sec": 500000, "sustained_frames_per_sec": 499762, "duration_s": 8.00, "latency_samples": 500000, "p50_us": 47.1, "p99_us": 156.2, "zero_loss": true},
+    {"channels": 10000, "target_frames_per_sec": 1000000, "sustained_frames_per_sec": 999593, "duration_s": 8.00, "latency_samples": 1000000, "p50_us": 88.4, "p99_us": 267.7, "zero_loss": true}
+  ]
+}
